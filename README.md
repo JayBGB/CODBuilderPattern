@@ -67,12 +67,11 @@ Si quisieramos crear coches con diferente color o motor, habría que crear la cl
 
 Dado que la explicación extendida está arriba en la tarea, copio y pego esa respuesta y voy a hacer un ejemplo con código. 
  
-
+ Sí, el patrón Builder se puede combinar con el patrón Factory para crear objetos complejos de forma más flexible y escalable. Una forma de combinar estos patrones es utilizando una clase Factory que crea objetos de una clase determinada utilizando un Builder interno para configurar las propiedades del objeto. De esta manera, se puede separar la creación del objeto de su construcción, lo que permite una mayor flexibilidad y escalabilidad en el proceso de creación.
 
 1.-En primer lugar, si quisieramos crear un objeto de tipo Coche con sus diferentes características, hay que crear una interfaz.
 
 ```
-
 public interface CocheBuilder {
     public void buildModelo(String modelo);
     public void buildColor(String color);
