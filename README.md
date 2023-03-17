@@ -54,7 +54,7 @@ Si quisieramos crear coches con diferente color o motor, habría que crear la cl
           +build()
       }
       
-      CocheBuilder *-- "1" Casa : association
+      CocheBuilder *-- "1" Coche : association
       class Coche{
         +Atributos Coche
         +Getters & Setters()
