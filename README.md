@@ -49,15 +49,18 @@ Si quisieramos crear coches con diferente color o motor, habría que crear la cl
           +main()
       }
       class CocheBuilder{
+          -_Coche
+          +Getters & Setters()
           +build()
       }
       
-      CocheBuilder *-- "1" coche : association
+      CocheBuilder *-- "1" Casa : association
       class Coche{
-        +Coche()
+        +Atributos Coche
+        +Getters & Setters()
+        +Coches()
       }
       
-
 ```
 
 ### ¿Podríamos combinarlo con el patrón Factory? Explica con algo de código como lo harías.
