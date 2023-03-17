@@ -77,8 +77,31 @@ public class CocheBuilderImpl implements CocheBuilder {
     }
 }
 
+```
+
+3.- Ahora creamos una Factory para crear las instancias de CocheBuilder.
 
 ```
+public class CocheBuilderFactory {
+    public static CocheBuilder crearCocheBuilder() {
+        return new CocheBuilderImpl();
+    }
+}
+
+```
+
+4.- ¡Ahora ya podemos utilizar la combinación para construir nuestro coche!
+
+```
+CocheBuilder cocheBuilder = CocheBuilderFactory.createCocheBuilder();
+cocheBuilder.buildModelo("Tesla Model 3");
+cocheBuilder.buildColor("Rojo");
+cocheBuilder.buildMotor("Eléctrico");
+Coche coche = cocheBuilder.getCoche();
+```
+
+
+
 
 
 
